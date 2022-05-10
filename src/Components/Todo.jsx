@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
-import { FaTrash } from 'react-icons/fa';
 
 function Todo({ text, todo, todos, setTodos }) {
 
@@ -30,7 +29,7 @@ function Todo({ text, todo, todos, setTodos }) {
     <div className={`${todo.completed ? 'completed' : ''} ${"list-item"}`} >
         <button onClick={completeText} className="completed-btn"><FaCheck/></button>
         <li className='list-text'>{text}</li>
-        <button onClick={deleteText} className="delete-btn"><FaTrash/></button>
+        <button onClick={deleteText} className="delete-btn">X</button>
     </div>
   )
 }
