@@ -26,7 +26,8 @@ function TodoList({ todos, setTodos, filteredTodos }) {
     <div>
         <ul className='list'>
           <button onClick={allCompletedDelete} className="deleteCheck-btn"><FaSkull/></button>
-          <button onClick={allCompletedHandler} className="allCompleted-btn"> <FaCheck /> </button>
+          <button onClick={allCompletedHandler} className="allCompleted-btn"> <FaCheck />
+           </button>
             {
               filteredTodos.map((todo) => (
                   <Todo 
