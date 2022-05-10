@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FaBell} from 'react-icons/fa';
+import { FaThumbsUp } from 'react-icons/fa';
 
 function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
 
@@ -58,25 +60,26 @@ function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
                 <input 
                 value={inputText} 
                 onChange={onChangeInput}
-                className="input" />
+                className="input"
+                placeholder='What needs to be done ?' />
         </form>
         
         <h4 className='counter'>{todos.length}</h4>
 
         <div name="todos" onClick={statusHandler} className="statusButton">
-            <button value="all">all</button>
-            <button value="completed">completed</button>
-            <button value="uncompleted">uncompleted</button>
+            <button value="all">All</button>
+            <button value="completed">Completed</button>
+            <button value="uncompleted">Uncompleted</button>
         </div>  
 
         <div className='alert-wrapper'>
             {/* WARNING */}
             {alertWarning ? <div className='alert-warning'>
-                    <div>Input alanı boş!</div>
+                    <div><FaBell/> Please type something to do!</div>
                 </div> : ""}
                 {/* SUCCESS */}
             {alertSuccess ? <div className='alert-success'>
-                <div>Kayıt Başarılı</div>
+                <div><FaThumbsUp/> Successfully saved</div>
             </div> : ""}  
         </div>
     </div>
